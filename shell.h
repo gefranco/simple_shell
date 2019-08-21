@@ -7,7 +7,7 @@
 #include<string.h>
 #define MAXLINE 1000
 
-int cmdbld(char *bin,char *buffer,char *args[]);
+int cmdbld(char *buffer,char *args[]);
 int execmd(char *args[]);
 
 #endif
