@@ -1,5 +1,5 @@
 #include "shell.h"
-int cmdbld(char *bin, char *buffer, char *args[])
+int cmdbld(char *buffer, char *args[])
 {
         char *av;
         size_t max = MAXLINE;
@@ -14,7 +14,7 @@ int cmdbld(char *bin, char *buffer, char *args[])
 	i = 0;
 	av = NULL;      
 	av = strtok(buffer, " ");        
-	av = strcat(bin, av);
+	//av = strcat(bin, av);
 	while(av)
 	{
 		args[i] = av;
