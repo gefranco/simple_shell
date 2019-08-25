@@ -1,0 +1,65 @@
+.TH Simple_Shell manpage "29 August 2019" "version 1.0"
+.SH NAME
+.PP
+Simple_Shell
+.PP
+.SH SYNOPSIS
+.PP
+.I Command [Option(s)]
+.PP
+.SH DESCRIPTION
+.PP
+Simple Shell is a language interpreter that executes commands that it reads from the standard input, basic commands such as "ls" can be used to list files and commands in a long format directory, they can also be used in commands such as "pwd" to display the working directory where it is located, when entering the shell a message is displayed that the user must enter a command, the shell receives and reads the sequence of files, this user input is stored in a buffer as a string.
+.PP
+.SH OPTIONS
+.PP
+(CRTL - C) - It remains in the execution of the program.
+.PP
+(CRTL - D) - Close the Shell.
+.PP
+Shell commands allow you to execute some of these options.
+.PP
+pwd - Show current working directory.
+.PP
+touch - Proceed to create a new empty file.
+.PP
+mkdir - A new directory is created.
+.PP
+exit - The shell to exit the program.
+.PP
+env - Print enviroment.
+.PP
+cd - Change the current directory with a argument.
+.PP
+.SH EXAMPLE
+.PP
+command cd:
+.PP
+.SH FUNCTION FILE
+.PP
+shell.h - This is the file conteins the prototypes functions and another libraries.
+.PP
+cmdbld.c
+.PP
+execmd.c
+.PP
+main.c
+.PP
+.SH BUGS
+.PP
+No bugs were reported in the execution of this program, if you discover any bugs in the execution of the program, please contact the administration.
+.PP
+.SH AUTHOR
+.PP
+The authors of this project were:
+.PP
+"German Franco" <german.franco@gmail.com>
+.PP
+"Jose Gabriel Guerra" <jgabrielguerral@gmail.com>
+.PP
+.SH SEE ALSO
+.PP
+This project is in the git repository "https://github.com/gefranco/simple_shell"
+.PP
+COPYRIGHT 2019
+.PP
