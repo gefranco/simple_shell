@@ -2,11 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include "shell.h"
-int ptrenv(void)
+int ptrenv(char **environ)
 {
 	unsigned int i;
 
-	extern char **environ;
 	
 	i = 0;
 	while (environ[i])
