@@ -1,44 +1,59 @@
 #include "shell.h"
 
+
+int exblt(char *b)
+{
+	int i;
+	
+	char *ex;
+       
+	i = 0;
+	ex = "exit\n";
+	while(b[i])
+	{
+		if(ex[i] != b[i])
+			return 0;
+		i++;
+	}
+
+	return 1;
+}
+
 int main(void)
 {
 	int status;
         pid_t pid_c;
-
+	int glr;
 	char *buffer;
-       	//char *bin;
-        size_t max = MAXLINE;	 
 	char *args[MAXLINE];
-	
-	printf("#cisfun$ ");
-	while(getline(&buffer,&max, stdin) > 0)
-        {
-		printf("#cisfun$ ");
-		/*bin = malloc(5 * sizeof(char));
-                bin[0] = '/';
-                bin[1] = 'b';
-                bin[2] = 'i';
-                bin[3] = 'n';
-                bin[4] = '/';
-		*/
-                        
-		cmdbld(buffer,args);
-		
-	       	pid_c = fork();         
-                
-                if(pid_c > 0)//father
+        /*size_t max = MAXLINE;*/	 
+        size_t max = 0;	 
+
+        do{
+		write(1, "$ ",2);
+	       	
+		glr = getline(&buffer,&max, stdin);
+
+		if(glr == -1 || exblt(buffer))
+		{
+			free(buffer);
+			exit(0);
+		}
+		pid_c = fork();         
+                if(pid_c > 0)/*father*/
                 {
                         pid_c =wait(&status);
-                       // free(bin);
                         continue;
                 }
                 else if(pid_c == 0)
                 {
+			cmdbld(buffer,args);
+			if(fpcmd(args)==NULL)
+				exit(0);
                         exit(execmd(args));
                 }
 
-        }
-        free(buffer);   
+        }while(glr > 0);
         return (0);
 
 	
