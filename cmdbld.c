@@ -1,20 +1,20 @@
 #include "shell.h"
 int cmdbld(char *buffer, char *args[])
 {
-        char *av;
-        size_t max = MAXLINE;
+        
+	char *av;
 	int i;
 
 	i = 0;
+
 	while(buffer[i])
 		i++;
                 
 	buffer[i-1] = 0;
-
+	
 	i = 0;
 	av = NULL;      
 	av = strtok(buffer, " ");        
-	//av = strcat(bin, av);
 	while(av)
 	{
 		args[i] = av;
