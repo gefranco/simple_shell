@@ -1,43 +1,23 @@
 #include "shell.h"
-
-int exblt(char *b)
-{
-	int i;
-	
-	char *ex;
-       
-	i = 0;
-	ex = "exit\n";
-	while(b[i])
-	{
-		if(ex[i] != b[i])
-			return 0;
-		i++;
-	}
-
-	return 1;
-}
-
 /**
  * main - Entry to launch program.
  * Return: If all goes well, return 0.
  */
-
-int main(void)
+int main(int ac, char **av, char **env)
 {
 	int status;
         pid_t pid_c;
 	int glr;
 	char *buffer;
-	char *args[MAXLINE];
-        /*size_t max = MAXLINE;*/	 
+	char *args[MAX];
         size_t max = 0;	 
-
-        do{
+        
+	(void)ac;
+	(void)av;
+	
+	do{
 		write(1, "$ ",2);
-	       	
 		glr = getline(&buffer,&max, stdin);
-
 		if(glr == -1 || exblt(buffer))
 		{
 			free(buffer);
@@ -52,14 +32,11 @@ int main(void)
                 else if(pid_c == 0)
                 {
 			cmdbld(buffer,args);
-			if(fpcmd(args)==NULL)
+			if(fpcmd(args, env)==NULL)
 				exit(0);
                         exit(execmd(args));
                 }
 
         }while(glr > 0);
         return (0);
-
 }
-
-
