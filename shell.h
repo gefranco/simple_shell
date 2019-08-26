@@ -10,4 +10,10 @@
 int cmdbld(char *buffer,char *args[]);
 int execmd(char *args[]);
 
+char *_getenv(const char *name);
+int pathdirs(char *path, char **dirs);
+
+char *fpcmd(char *args[]);
+
+int ptrenv(void);
 #endif
