@@ -1,6 +1,5 @@
 #include "shell.h"
 
-
 int exblt(char *b)
 {
 	int i;
@@ -18,6 +17,11 @@ int exblt(char *b)
 
 	return 1;
 }
+
+/**
+ * main - Entry to launch program.
+ * Return: If all goes well, return 0.
+ */
 
 int main(void)
 {
@@ -56,7 +60,6 @@ int main(void)
         }while(glr > 0);
         return (0);
 
-	
 }
 
 
