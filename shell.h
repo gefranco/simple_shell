@@ -5,15 +5,19 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#define MAXLINE 1000
+#define MAX 1000
 
 int cmdbld(char *buffer, char *args[]);
 int execmd(char *args[]);
 
-char *_getenv(const char *name);
+char *_getenv(const char *name, char **);
 int pathdirs(char *path, char **dirs);
 
-char *fpcmd(char *args[]);
+char *fpcmd(char *args[], char **);
 
-int ptrenv(void);
+int ptrenv(char **);
+int _strcmp(char *s1, const char *s2);
+int _strlen(char *s);
+int exblt(char *b);
+char *concat(char *buff, char *cmd, char *f);
 #endif
