@@ -5,11 +5,12 @@
  * @s2 : the second string
  * Return: 0 if equals
  */
+
 int _strcmp(char *s1, const char *s2)
 {
 	int i;
 	int e;
-	
+
 	i = 0;
 	e = 0;
 	while (s1[i] != '\0' || s2[i] != '\0')
