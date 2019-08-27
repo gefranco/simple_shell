@@ -17,7 +17,7 @@ int pathdirs(char *path, char **dirs)
 	while (av)
 	{
 		dirs[i] = malloc(_strlen(av) * sizeof(char));
-		strcpy(dirs[i], av);
+		_strcpy(dirs[i], av);
 		av = strtok(NULL, ":");
 		i++;
 	}

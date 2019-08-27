@@ -26,7 +26,7 @@ char *_getenv(const char *name, char **environ)
 	while (environ[i])
 	{
 		tmp = malloc(_strlen(environ[i]) * sizeof(char));
-		strcpy(tmp, environ[i]);
+		_strcpy(tmp, environ[i]);
 		av = strtok(tmp, "=");
 		if (_strcmp(av, name) == 0)
 		{
