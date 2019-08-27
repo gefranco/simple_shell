@@ -71,13 +71,23 @@ For example:	$ /bin/pwd
 ```
 FILE			THIS EXECUTIVE FILE
 
-cmdbld.c		-----------------------
-execmd.c		-----------------------
+cmdbld.c		Tokanize to create separate commands.
+concat.c		Concatenate an string to string destination.
+execmd.c		Execute the command.
+exittblt.c		Exit the command.
+fpcmd.c			File the command path.
+getenv.c		This function gets the enviroment of the commands.
+pathdirs.c		With this function you get the full path and save it in a chain.
+ptrenv.c		Print the environment of the variable
+_strcmp.c		Compares only the bytes of s1 & s2.
+_strcpy.c		Copies the src, including '\0', to the buffer pointed to dest.
+_strlen.c		This function counts the leng of a string.
 main.c			Main File, entry point for shell.
 shell.h			This is the file contains the prototypes functions files and anothers libraries.
 man_1_simple_shell	Documentation Man_Page
 README.md		Documentation Readme File
 AUTHORS			Documentation File contain text whith the name of authors
+
 ```
 
 ### AUTHORS
