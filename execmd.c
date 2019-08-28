@@ -15,7 +15,7 @@ int execmd(char *args[], char *av)
 	if (stat(args[0], &st) != 0)
 	{
 		perror(av);
-		return (127);
+		return (EXIT_FAILURE);
 	}
 	if (execve(args[0], args, NULL) == -1)
 	{
