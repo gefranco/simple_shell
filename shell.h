@@ -8,7 +8,7 @@
 #define MAX 1000
 
 int cmdbld(char *buffer, char *args[]);
-int execmd(char *args[]);
+int execmd(char *args[], char *av);
 
 char *_getenv(const char *name, char **);
 int pathdirs(char *path, char **dirs);

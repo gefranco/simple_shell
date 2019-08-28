@@ -16,7 +16,6 @@ int main(int ac, char **av, char **env)
 	size_t max = 0;
 
 	(void)ac;
-	(void)av;
 
 	do {
 		/*write(1, "$ ", 2);*/
@@ -37,7 +36,7 @@ int main(int ac, char **av, char **env)
 			cmdbld(buffer, args);
 			if (fpcmd(args, env) == NULL)
 				exit(0);
-			exit(execmd(args));
+			exit(execmd(args, av[0]));
 		}
 
 	} while (glr > 0);
