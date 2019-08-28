@@ -19,7 +19,7 @@ int main(int ac, char **av, char **env)
 	(void)av;
 
 	do {
-		write(1, "$ ", 2);
+		/*write(1, "$ ", 2);*/
 		glr = getline(&buffer, &max, stdin);
 		if (glr == -1 || exblt(buffer))
 		{
