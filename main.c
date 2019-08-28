@@ -20,7 +20,7 @@ int main(int ac, char **av, char **env)
 	do {
 		/*write(1, "$ ", 2);*/
 		glr = getline(&buffer, &max, stdin);
-		if (glr == -1 || exblt(buffer))
+		if (glr == EOF || exblt(buffer))
 		{
 			free(buffer);
 			exit(0);
