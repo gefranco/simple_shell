@@ -1,14 +1,22 @@
 #include "shell.h"
-
+#include <sys/types.h>
+#include <sys/stat.h>
 /**
  * execmd - Execute the command.
  * @args: Character array where the command is tokanized.
  * Return: If all goes well, return 0.
  */
 
-int execmd(char *args[])
+int execmd(char *args[], char *av)
 {
 
+	struct stat st;
+
+	if (stat(args[0], &st) != 0)
+	{
+		perror(av);
+		return (-1);
+	}
 	if (execve(args[0], args, NULL) == -1)
 	{
 
