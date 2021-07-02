@@ -8,7 +8,6 @@
 </p>
 
 
-![Holberton Logo](Shell.jpg)
 
 #### Project carried out as part of the software developer training curriculum at Holberton School
 
