@@ -1,4 +1,12 @@
-# SIMPLE SHELL - Command Language Interpreter
+<h1 align="center">SIMPLE SHELL - Command Language Interpreter</h1>
+
+<p align="center">
+  <img src="https://github.com/gefranco/simple_shell/blob/master/Shell.jpg"
+       alt="shell"
+       width="500"
+  >
+</p>
+
 
 ![Holberton Logo](Shell.jpg)
 
